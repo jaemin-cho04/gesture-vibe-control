@@ -21,8 +21,7 @@ class HandDetector:
         return img
 
     def get_position(self, img):
-        # We use a DICTIONARY here so your main code can find points instantly
-        lm_dict = {} 
+        lm_dict = {}
         if self.results.multi_hand_landmarks:
             my_hand = self.results.multi_hand_landmarks[0]
             for id, lm in enumerate(my_hand.landmark):
